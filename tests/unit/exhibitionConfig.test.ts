@@ -25,9 +25,36 @@ describe('exhibition configuration', () => {
     expect(new Set(colours).size).toBe(25);
     expect(
       channels.every(
-        (rgb) => rgb.length === 3 && rgb.every((channel) => channel >= 0 && channel <= 255),
+        (rgb) =>
+          rgb.length === 3 && rgb.every((channel) => channel >= 0 && channel <= 255),
       ),
     ).toBe(true);
+  });
+
+  it('paints frame 1 with the deep blue wall colour', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[0]!.wall.color.toLowerCase()).toBe('#0f1a3d');
+  });
+
+  it('paints frame 3 with the deep blue wall colour', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[2]!.wall.color.toLowerCase()).toBe('#1e3a8a');
+  });
+
+  it('paints frame 8 with the midnight blue wall colour and stars', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[7]!.wall.color.toLowerCase()).toBe('#191970');
+    expect(walls[7]!.wall.imageSrc).toBe('/artworks/midnight-stars.svg');
+    expect(walls[7]!.wall.imageAspectRatio).toBeCloseTo(2.55 / 4.9);
+  });
+
+  it('paints frame 9 with the soft lilac wall colour', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[8]!.wall.color.toLowerCase()).toBe('#e7e1f0');
   });
 
   it('accepts the starter exhibition', () => {
@@ -53,7 +80,9 @@ describe('exhibition configuration', () => {
     const config: ExhibitionConfig = structuredClone(starterExhibition);
     config.stations[1]!.wall.color = config.stations[0]!.wall.color;
 
-    expect(() => validateExhibition(config)).toThrow(/duplicate wall colour .+ shared by frames 1 and 2/i);
+    expect(() => validateExhibition(config)).toThrow(
+      /duplicate wall colour .+ shared by frames 1 and 2/i,
+    );
   });
 
   it('rejects a non-positive painting count with a clear error', () => {

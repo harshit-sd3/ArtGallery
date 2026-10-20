@@ -27,15 +27,15 @@ export type ExhibitionConfig = {
 };
 
 const starterStations: StationConfig[] = [
-  ['A Room of Blue', 'Mara Velez', 2021, '#6e9ea5', '#fffdf8'],
+  ['A Room of Blue', 'Mara Velez', 2021, '#6e9ea5', '#0f1a3d'],
   ['After the Rain', 'Jonas Reed', 2019, '#bf8063', '#0b2545'],
-  ['Soft Geometry', 'Nadia Okafor', 2024, '#d4b46e', '#f7f5ef'],
+  ['Soft Geometry', 'Nadia Okafor', 2024, '#d4b46e', '#1e3a8a'],
   ['Still Morning', 'Elias Chen', 2020, '#758d77', '#ece4f6'],
-  ['A Place to Pause', 'Mara Velez', 2022, '#c27965', '#efeee8'],
+  ['A Place to Pause', 'Mara Velez', 2022, '#bf00ff', '#efeee8'],
   ['The Quiet Field', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
   ['Summer Index', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
-  ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#f0eee7'],
-  ['The Long Window', 'Mara Velez', 2020, '#b77565', '#fcfcf8'],
+  ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#191970'],
+  ['The Long Window', 'Mara Velez', 2020, '#b77565', '#e7e1f0'],
   ['Common Light', 'Jonas Reed', 2022, '#c1a872', '#f6f7f2'],
   ['Blue Orchard', 'Nadia Okafor', 2019, '#688c92', '#f4f1e8'],
   ['Held in Place', 'Elias Chen', 2024, '#b9815e', '#f2f0e9'],
@@ -69,6 +69,10 @@ starterStations[0]!.imageSrc = '/artworks/quiet-orbit.svg';
 starterStations[0]!.imageAspectRatio = 4 / 3;
 starterStations[1]!.imageSrc = '/artworks/warm-current.svg';
 starterStations[1]!.imageAspectRatio = 2 / 3;
+
+// Frame 8 is a midnight blue wall scattered with stars.
+starterStations[7]!.wall.imageSrc = '/artworks/midnight-stars.svg';
+starterStations[7]!.wall.imageAspectRatio = 2.55 / 4.9;
 
 // Each station owns its wall settings and painting fields in this sole authoring surface.
 export const starterExhibition: ExhibitionConfig = {
