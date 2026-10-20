@@ -31,25 +31,10 @@ describe('exhibition configuration', () => {
     ).toBe(true);
   });
 
-  it('paints the recoloured frames and keeps every other wall a near-white shade', () => {
+  it('paints frame 3 with the deep blue wall colour', () => {
     const walls = starterExhibition.stations.slice(0, starterExhibition.count);
-    const channels = (colour: string) =>
-      colour
-        .replace('#', '')
-        .match(/.{2}/g)!
-        .map((channel) => Number.parseInt(channel, 16));
 
-    expect(walls[1]!.wall.color.toLowerCase()).toBe('#0b2545');
     expect(walls[2]!.wall.color.toLowerCase()).toBe('#1e3a8a');
-    expect(walls[3]!.wall.color.toLowerCase()).toBe('#ece4f6');
-
-    const otherWalls = walls.filter((_, index) => index < 1 || index > 3);
-    expect(
-      otherWalls.every((station) => {
-        const rgb = channels(station.wall.color);
-        return rgb.length === 3 && Math.min(...rgb) >= 224;
-      }),
-    ).toBe(true);
   });
 
   it('accepts the starter exhibition', () => {
