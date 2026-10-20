@@ -43,6 +43,14 @@ describe('exhibition configuration', () => {
     expect(walls[2]!.wall.color.toLowerCase()).toBe('#1e3a8a');
   });
 
+  it('titles frame 9 after the Personal Magnetism cover', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[8]!.title).toBe('Personal Magnetism');
+    expect(walls[8]!.artist).toBe('The Psychic Research Co.');
+    expect(walls[8]!.imageSrc).toBe('/artworks/personal-magnetism-cover.jpg');
+  });
+
   it('paints frame 8 with the midnight blue wall colour and stars', () => {
     const walls = starterExhibition.stations.slice(0, starterExhibition.count);
 
