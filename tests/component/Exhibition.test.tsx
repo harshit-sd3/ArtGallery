@@ -19,6 +19,8 @@ describe('Exhibition', () => {
     expect(wallColours).toHaveLength(25);
     expect(new Set(wallColours).size).toBe(25);
     expect(wallColours[0]).toBe('0f1a3d');
+    expect(wallColours[2]).toBe('1e3a8a');
+    expect(wallColours[7]).toBe('191970');
   });
 
   it('shows overview signs and hides them when an artwork is focused', async () => {

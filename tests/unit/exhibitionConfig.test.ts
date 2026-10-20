@@ -34,7 +34,7 @@ describe('exhibition configuration', () => {
   it('paints frame 1 with the deep blue wall colour', () => {
     const walls = starterExhibition.stations.slice(0, starterExhibition.count);
 
-    expect(walls[0]!.wall.color.toLowerCase()).toBe('#16213e');
+    expect(walls[0]!.wall.color.toLowerCase()).toBe('#0f1a3d');
   });
 
   it('paints frame 3 with the deep blue wall colour', () => {
