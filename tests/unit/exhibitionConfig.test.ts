@@ -25,8 +25,30 @@ describe('exhibition configuration', () => {
     expect(new Set(colours).size).toBe(25);
     expect(
       channels.every(
-        (rgb) => rgb.length === 3 && rgb.every((channel) => channel >= 0 && channel <= 255),
+        (rgb) =>
+          rgb.length === 3 && rgb.every((channel) => channel >= 0 && channel <= 255),
       ),
+    ).toBe(true);
+  });
+
+  it('paints the recoloured frames and keeps every other wall a near-white shade', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+    const channels = (colour: string) =>
+      colour
+        .replace('#', '')
+        .match(/.{2}/g)!
+        .map((channel) => Number.parseInt(channel, 16));
+
+    expect(walls[1]!.wall.color.toLowerCase()).toBe('#0b2545');
+    expect(walls[2]!.wall.color.toLowerCase()).toBe('#1e3a8a');
+    expect(walls[3]!.wall.color.toLowerCase()).toBe('#ece4f6');
+
+    const otherWalls = walls.filter((_, index) => index < 1 || index > 3);
+    expect(
+      otherWalls.every((station) => {
+        const rgb = channels(station.wall.color);
+        return rgb.length === 3 && Math.min(...rgb) >= 224;
+      }),
     ).toBe(true);
   });
 
@@ -53,7 +75,9 @@ describe('exhibition configuration', () => {
     const config: ExhibitionConfig = structuredClone(starterExhibition);
     config.stations[1]!.wall.color = config.stations[0]!.wall.color;
 
-    expect(() => validateExhibition(config)).toThrow(/duplicate wall colour .+ shared by frames 1 and 2/i);
+    expect(() => validateExhibition(config)).toThrow(
+      /duplicate wall colour .+ shared by frames 1 and 2/i,
+    );
   });
 
   it('rejects a non-positive painting count with a clear error', () => {
