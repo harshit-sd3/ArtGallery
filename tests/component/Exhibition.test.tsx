@@ -5,20 +5,7 @@ import { Exhibition } from '../../src/scene/Exhibition';
 import { starterExhibition } from '../../src/config/exhibition';
 
 describe('Exhibition', () => {
-it('renders 25 starter paintings with distinct wall shades', async () => {
-    const renderer = await ReactThreeTestRenderer.create(
-      <Exhibition config={starterExhibition} onSelect={() => undefined} />,
-    );
-    const artworks = renderer.scene.findAllByProps({ name: 'artwork-surface' });
-    const walls = renderer.scene.findAllByProps({ name: 'wall-panel' });
-    const wallColours = walls.map((wall) =>
-      ((wall.instance as Mesh).material as MeshStandardMaterial).color.getHexString(),
-    );
-
-    expect(artworks).toHaveLength(25);
-    expect(wallColours).toHaveLength(25);
-    expect(wallColours.every((colour) => /^[0-9a-f]{6}$/.test(colour))).toBe(true);
-
+  it('renders 25 starter paintings with distinct wall colours', async () => {
     const renderer = await ReactThreeTestRenderer.create(
       <Exhibition config={starterExhibition} onSelect={() => undefined} />,
     );
@@ -31,11 +18,9 @@ it('renders 25 starter paintings with distinct wall shades', async () => {
     expect(artworks).toHaveLength(25);
     expect(wallColours).toHaveLength(25);
     expect(new Set(wallColours).size).toBe(25);
-<<<<<<< HEAD
+    expect(wallColours[0]).toBe('16213e');
     expect(wallColours[2]).toBe('1e3a8a');
-=======
-    expect(wallColours.every((colour) => /^[0-9a-f]{6}$/.test(colour))).toBe(true);
->>>>>>> 8e65a7d (Update ArtGallery frame 1 wall shade to deep blue)
+    expect(wallColours[7]).toBe('191970');
   });
 
   it('shows overview signs and hides them when an artwork is focused', async () => {
