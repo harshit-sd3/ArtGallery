@@ -83,6 +83,12 @@ starterStations[3]!.imageSrc = '/artworks/harold-taylor-autochrome.jpg';
 starterStations[3]!.imageAspectRatio = 1198 / 970;
 starterStations[3]!.artist = 'Harold A. Taylor';
 
+// Frame 9 hangs the green "Personal Magnetism" cover from the 1901 photo essay.
+starterStations[8]!.imageSrc = '/artworks/personal-magnetism-cover.jpg';
+starterStations[8]!.imageAspectRatio = 1744 / 2848;
+starterStations[8]!.artist = 'The Psychic Research Co.';
+starterStations[8]!.year = 1901;
+
 // Frame 8 is a midnight blue wall scattered with stars.
 starterStations[7]!.wall.imageSrc = '/artworks/midnight-stars.svg';
 starterStations[7]!.wall.imageAspectRatio = 2.55 / 4.9;
