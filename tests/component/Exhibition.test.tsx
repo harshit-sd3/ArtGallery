@@ -21,6 +21,7 @@ describe('Exhibition', () => {
     expect(wallColours[0]).toBe('0f1a3d');
     expect(wallColours[2]).toBe('1e3a8a');
     expect(wallColours[7]).toBe('191970');
+    expect(wallColours[8]).toBe('e7e1f0');
   });
 
   it('shows overview signs and hides them when an artwork is focused', async () => {

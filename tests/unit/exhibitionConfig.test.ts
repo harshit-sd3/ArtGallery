@@ -51,6 +51,12 @@ describe('exhibition configuration', () => {
     expect(walls[7]!.wall.imageAspectRatio).toBeCloseTo(2.55 / 4.9);
   });
 
+  it('paints frame 9 with the soft lilac wall colour', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[8]!.wall.color.toLowerCase()).toBe('#e7e1f0');
+  });
+
   it('accepts the starter exhibition', () => {
     expect(() => validateExhibition(starterExhibition)).not.toThrow();
   });
