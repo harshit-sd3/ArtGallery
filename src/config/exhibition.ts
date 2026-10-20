@@ -30,7 +30,7 @@ const starterStations: StationConfig[] = [
   ['A Room of Blue', 'Anonymous', 2021, '#6e9ea5', '#0f1a3d'],
   ['After the Rain', 'Jonas Reed', 2019, '#bf8063', '#0b2545'],
   // Space 3: deep blue wall.
-  ['Soft Geometry', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
+  ['Golden Ratio', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
   ['Still Morning', 'Elias Chen', 2020, '#758d77', '#ece4f6'],
   // Space 5: title given in Round 3.
   ['Platonic Affection', 'Unattributed', 2022, '#bf00ff', '#efeee8'],
