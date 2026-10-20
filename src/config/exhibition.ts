@@ -27,7 +27,7 @@ export type ExhibitionConfig = {
 };
 
 const starterStations: StationConfig[] = [
-  ['A Room of Blue', 'Mara Velez', 2021, '#6e9ea5', '#0f1a3d'],
+  ['A Room of Blue', 'Anonymous', 2021, '#6e9ea5', '#0f1a3d'],
   ['After the Rain', 'Jonas Reed', 2019, '#bf8063', '#0b2545'],
   // Space 3: deep blue wall.
   ['Soft Geometry', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
@@ -66,8 +66,9 @@ const starterStations: StationConfig[] = [
   },
 }));
 
-starterStations[0]!.imageSrc = '/artworks/quiet-orbit.svg';
-starterStations[0]!.imageAspectRatio = 4 / 3;
+// Space 1 hangs a sixteenth-century broadsheet of a celestial phenomenon over Nuremberg.
+starterStations[0]!.imageSrc = '/artworks/nuremberg-celestial-1556.jpg';
+starterStations[0]!.imageAspectRatio = 1125 / 1104;
 starterStations[1]!.imageSrc = '/artworks/warm-current.svg';
 starterStations[1]!.imageAspectRatio = 2 / 3;
 starterStations[4]!.imageSrc = '/artworks/bear-woman-vessel.jpg';
@@ -81,6 +82,12 @@ starterStations[2]!.imageAspectRatio = 1024 / 1307;
 starterStations[3]!.imageSrc = '/artworks/harold-taylor-autochrome.jpg';
 starterStations[3]!.imageAspectRatio = 1198 / 970;
 starterStations[3]!.artist = 'Harold A. Taylor';
+
+// Frame 9 hangs the green "Personal Magnetism" cover from the 1901 photo essay.
+starterStations[8]!.imageSrc = '/artworks/personal-magnetism-cover.jpg';
+starterStations[8]!.imageAspectRatio = 1744 / 2848;
+starterStations[8]!.artist = 'The Psychic Research Co.';
+starterStations[8]!.year = 1901;
 
 // Frame 8 is a midnight blue wall scattered with stars.
 starterStations[7]!.wall.imageSrc = '/artworks/midnight-stars.svg';
