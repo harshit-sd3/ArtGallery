@@ -29,7 +29,7 @@ export type ExhibitionConfig = {
 
 const starterStations: StationConfig[] = [
   ['A Room of Blue', 'Anonymous', 2021, '#6e9ea5', '#0f1a3d'],
-  ['After the Rain', 'Jonas Reed', 2019, '#bf8063', '#0b2545'],
+  ['A Circle of Orange', 'Jonas Reed', 2019, '#bf8063', '#0b2545'],
   // Space 3: deep blue wall.
   ['Golden Ratio', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
   ['A Single Bloom', 'Elias Chen', 2020, '#758d77', '#ece4f6'],
@@ -106,6 +106,8 @@ starterStations[7]!.wall.imageAspectRatio = 2.55 / 4.9;
 starterStations[1]!.imageSrc = '/artworks/harold-taylor.jpg';
 starterStations[1]!.imageAspectRatio = 21 / 17;
 starterStations[1]!.artist = 'Harold A. Taylor';
+starterStations[1]!.caption =
+  'Autochrome. Orange flowers in a circle of light, colour laid on in grains of dyed potato starch.';
 
 export const starterExhibition: ExhibitionConfig = {
   count: 25,
