@@ -32,7 +32,7 @@ const starterStations: StationConfig[] = [
   // Space 3: deep blue wall.
   ['Soft Geometry', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
   ['Still Morning', 'Elias Chen', 2020, '#758d77', '#ece4f6'],
-  ['A Place to Pause', 'Mara Velez', 2022, '#bf00ff', '#efeee8'],
+  ['A Place to Pause', 'Unattributed', 2022, '#bf00ff', '#efeee8'],
   ['The Quiet Field', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
   ['Summer Index', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
   ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#191970'],
@@ -70,6 +70,8 @@ starterStations[0]!.imageSrc = '/artworks/quiet-orbit.svg';
 starterStations[0]!.imageAspectRatio = 4 / 3;
 starterStations[1]!.imageSrc = '/artworks/warm-current.svg';
 starterStations[1]!.imageAspectRatio = 2 / 3;
+starterStations[4]!.imageSrc = '/artworks/bear-woman-vessel.jpg';
+starterStations[4]!.imageAspectRatio = 607 / 799;
 
 // Frame 3 hangs an anonymous 1830 engraving of Robert Knox.
 starterStations[2]!.imageSrc = '/artworks/robert-knox-engraving.jpg';
