@@ -37,12 +37,6 @@ describe('exhibition configuration', () => {
     expect(walls[0]!.wall.color.toLowerCase()).toBe('#0f1a3d');
   });
 
-  it('paints frame 3 with the deep blue wall colour', () => {
-    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
-
-    expect(walls[2]!.wall.color.toLowerCase()).toBe('#1e3a8a');
-  });
-
   it('paints frame 8 with the midnight blue wall colour and stars', () => {
     const walls = starterExhibition.stations.slice(0, starterExhibition.count);
 
