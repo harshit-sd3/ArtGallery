@@ -75,6 +75,11 @@ starterStations[1]!.imageAspectRatio = 2 / 3;
 starterStations[2]!.imageSrc = '/artworks/robert-knox-engraving.jpg';
 starterStations[2]!.imageAspectRatio = 1024 / 1307;
 
+// Frame 4 hangs an early 20th century autochrome of a rose by Harold A. Taylor.
+starterStations[3]!.imageSrc = '/artworks/harold-taylor-autochrome.jpg';
+starterStations[3]!.imageAspectRatio = 1198 / 970;
+starterStations[3]!.artist = 'Harold A. Taylor';
+
 // Frame 8 is a midnight blue wall scattered with stars.
 starterStations[7]!.wall.imageSrc = '/artworks/midnight-stars.svg';
 starterStations[7]!.wall.imageAspectRatio = 2.55 / 4.9;
