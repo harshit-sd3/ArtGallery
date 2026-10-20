@@ -32,7 +32,8 @@ const starterStations: StationConfig[] = [
   // Space 3: deep blue wall.
   ['Soft Geometry', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
   ['Still Morning', 'Elias Chen', 2020, '#758d77', '#ece4f6'],
-  ['A Place to Pause', 'Unattributed', 2022, '#bf00ff', '#efeee8'],
+  // Space 5: title given in Round 3.
+  ['Platonic Affection', 'Unattributed', 2022, '#bf00ff', '#efeee8'],
   ['The Quiet Field', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
   ['Summer Index', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
   ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#191970'],
@@ -88,6 +89,11 @@ starterStations[8]!.imageSrc = '/artworks/personal-magnetism-cover.jpg';
 starterStations[8]!.imageAspectRatio = 1744 / 2848;
 starterStations[8]!.artist = 'The Psychic Research Co.';
 starterStations[8]!.year = 1901;
+
+// Frame 6 shows a scanned illustration from Nos Invisibles (1907).
+starterStations[5]!.imageSrc = '/artworks/nos-invisibles-hands-1907.jpg';
+starterStations[5]!.imageAspectRatio = 4267 / 6248;
+starterStations[5]!.artist = 'Raffaele Mainella';
 
 // Frame 8 is a midnight blue wall scattered with stars.
 starterStations[7]!.wall.imageSrc = '/artworks/midnight-stars.svg';
