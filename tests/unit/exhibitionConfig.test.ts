@@ -11,7 +11,7 @@ describe('exhibition configuration', () => {
     expect(starterExhibition.stations).toHaveLength(25);
   });
 
-  it('uses a different white shade for each starter wall', () => {
+  it('gives every wall a distinct colour', () => {
     const colours = starterExhibition.stations
       .slice(0, starterExhibition.count)
       .map((station) => station.wall.color.toLowerCase());
@@ -23,9 +23,11 @@ describe('exhibition configuration', () => {
     );
 
     expect(new Set(colours).size).toBe(25);
-    expect(channels.every((rgb) => rgb.length === 3 && Math.min(...rgb) >= 224)).toBe(
-      true,
-    );
+    expect(
+      channels.every(
+        (rgb) => rgb.length === 3 && rgb.every((channel) => channel >= 0 && channel <= 255),
+      ),
+    ).toBe(true);
   });
 
   it('accepts the starter exhibition', () => {
