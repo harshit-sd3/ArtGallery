@@ -27,17 +27,14 @@ export type ExhibitionConfig = {
 };
 
 const starterStations: StationConfig[] = [
-  ['A Room of Blue', 'Mara Velez', 2021, '#6e9ea5', '#1e3a8a'],
-  ['After the Rain', 'Jonas Reed', 2019, '#bf8063', '#0b2545'],
-  ['A Room of Blue', 'Mara Velez', 2021, '#6e9ea5', '#1e3a8a'],
+  ['A Room of Blue', 'Mara Velez', 2021, '#6e9ea5', '#0f1a3d'],
   ['After the Rain', 'Jonas Reed', 2019, '#bf8063', '#fbf8f1'],
   ['Soft Geometry', 'Nadia Okafor', 2024, '#d4b46e', '#f7f5ef'],
   ['Still Morning', 'Elias Chen', 2020, '#758d77', '#f3f2ec'],
   ['A Place to Pause', 'Mara Velez', 2022, '#c27965', '#efeee8'],
->>>>>>> 8e65a7d (Update ArtGallery frame 1 wall shade to deep blue)
   ['The Quiet Field', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
   ['Summer Index', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
-  ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#1f4e79'],
+  ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#f0eee7'],
   ['The Long Window', 'Mara Velez', 2020, '#b77565', '#fcfcf8'],
   ['Common Light', 'Jonas Reed', 2022, '#c1a872', '#f6f7f2'],
   ['Blue Orchard', 'Nadia Okafor', 2019, '#688c92', '#f4f1e8'],

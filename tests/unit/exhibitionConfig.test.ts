@@ -11,35 +11,13 @@ describe('exhibition configuration', () => {
     expect(starterExhibition.stations).toHaveLength(25);
   });
 
-it('uses a different shade for each starter wall', () => {
+  it('uses a different shade for each starter wall', () => {
     const colours = starterExhibition.stations
       .slice(0, starterExhibition.count)
       .map((station) => station.wall.color.toLowerCase());
 
     expect(new Set(colours).size).toBe(25);
     expect(colours.every((colour) => /^#[0-9a-f]{6}$/.test(colour))).toBe(true);
-
-    const colours = starterExhibition.stations
-      .slice(0, starterExhibition.count)
-      .map((station) => station.wall.color.toLowerCase());
-
-    expect(new Set(colours).size).toBe(25);
-<<<<<<< HEAD
-    expect(
-      channels.every(
-        (rgb) =>
-          rgb.length === 3 && rgb.every((channel) => channel >= 0 && channel <= 255),
-      ),
-    ).toBe(true);
-  });
-
-  it('paints frame 3 with the deep blue wall colour', () => {
-    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
-
-    expect(walls[2]!.wall.color.toLowerCase()).toBe('#1e3a8a');
-=======
-    expect(colours.every((colour) => /^#[0-9a-f]{6}$/.test(colour))).toBe(true);
->>>>>>> 8e65a7d (Update ArtGallery frame 1 wall shade to deep blue)
   });
 
   it('accepts the starter exhibition', () => {
@@ -65,9 +43,7 @@ it('uses a different shade for each starter wall', () => {
     const config: ExhibitionConfig = structuredClone(starterExhibition);
     config.stations[1]!.wall.color = config.stations[0]!.wall.color;
 
-    expect(() => validateExhibition(config)).toThrow(
-      /duplicate wall colour .+ shared by frames 1 and 2/i,
-    );
+    expect(() => validateExhibition(config)).toThrow(/duplicate wall colour .+ shared by frames 1 and 2/i);
   });
 
   it('rejects a non-positive painting count with a clear error', () => {
