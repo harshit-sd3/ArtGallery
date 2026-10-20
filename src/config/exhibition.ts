@@ -27,7 +27,7 @@ export type ExhibitionConfig = {
 };
 
 const starterStations: StationConfig[] = [
-  ['A Room of Blue', 'Mara Velez', 2021, '#6e9ea5', '#0f1a3d'],
+  ['A Room of Blue', 'Anonymous', 2021, '#6e9ea5', '#0f1a3d'],
   ['After the Rain', 'Jonas Reed', 2019, '#bf8063', '#0b2545'],
   // Space 3: deep blue wall.
   ['Soft Geometry', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
@@ -66,8 +66,9 @@ const starterStations: StationConfig[] = [
   },
 }));
 
-starterStations[0]!.imageSrc = '/artworks/quiet-orbit.svg';
-starterStations[0]!.imageAspectRatio = 4 / 3;
+// Space 1 hangs a sixteenth-century broadsheet of a celestial phenomenon over Nuremberg.
+starterStations[0]!.imageSrc = '/artworks/nuremberg-celestial-1556.jpg';
+starterStations[0]!.imageAspectRatio = 1125 / 1104;
 starterStations[1]!.imageSrc = '/artworks/warm-current.svg';
 starterStations[1]!.imageAspectRatio = 2 / 3;
 starterStations[4]!.imageSrc = '/artworks/bear-woman-vessel.jpg';
