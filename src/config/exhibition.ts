@@ -10,6 +10,7 @@ export type WallConfig = {
 
 export type StationConfig = {
   artist?: string;
+  caption?: string;
   color: string;
   imageSrc?: string;
   imageAspectRatio?: number;
@@ -30,12 +31,12 @@ const starterStations: StationConfig[] = [
   ['A Room of Blue', 'Anonymous', 2021, '#6e9ea5', '#0f1a3d'],
   ['After the Rain', 'Jonas Reed', 2019, '#bf8063', '#0b2545'],
   // Space 3: deep blue wall.
-  ['Soft Geometry', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
-  ['Still Morning', 'Elias Chen', 2020, '#758d77', '#ece4f6'],
+  ['Golden Ratio', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
+  ['A Single Bloom', 'Elias Chen', 2020, '#758d77', '#ece4f6'],
   // Space 5: title given in Round 3.
   ['Platonic Affection', 'Unattributed', 2022, '#bf00ff', '#efeee8'],
   ['The Quiet Field', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
-  ['Summer Index', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
+  ['Premium Toast', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
   ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#191970'],
   ['The Long Window', 'Mara Velez', 2020, '#b77565', '#e7e1f0'],
   ['Common Light', 'Jonas Reed', 2022, '#c1a872', '#f6f7f2'],
@@ -83,6 +84,8 @@ starterStations[2]!.imageAspectRatio = 1024 / 1307;
 starterStations[3]!.imageSrc = '/artworks/harold-taylor-autochrome.jpg';
 starterStations[3]!.imageAspectRatio = 1198 / 970;
 starterStations[3]!.artist = 'Harold A. Taylor';
+starterStations[3]!.caption =
+  'Autochrome. A single pale bloom held against deep shadow, colour carried in the fragile grain of the process.';
 
 // Frame 9 hangs the green "Personal Magnetism" cover from the 1901 photo essay.
 starterStations[8]!.imageSrc = '/artworks/personal-magnetism-cover.jpg';

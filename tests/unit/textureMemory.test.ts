@@ -29,4 +29,21 @@ describe('estimateTextureMemoryBytes', () => {
       expectedBytes(2, 128),
     );
   });
+
+  it('adds the taller label texture for every captioned station', () => {
+    const stations = [
+      { caption: 'A caption that makes the label taller.' },
+      { caption: undefined },
+      { caption: '   ' },
+    ];
+    const captioned = estimateTextureMemoryBytes({
+      count: 3,
+      surfaceResolution: 128,
+      stations,
+    });
+    const uncaptioned = estimateTextureMemoryBytes({ count: 3, surfaceResolution: 128 });
+
+    // Only the first station carries real caption text, so one extra label grows.
+    expect(captioned - uncaptioned).toBe(512 * 48 * 4);
+  });
 });

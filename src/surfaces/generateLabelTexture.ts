@@ -7,12 +7,24 @@ import {
   type Texture,
 } from 'three';
 
+export const WALL_LABEL_WIDTH = 512;
+export const WALL_LABEL_HEIGHT = 128;
+export const WALL_LABEL_CAPTION_HEIGHT = 176;
+/** World units of wall-label height per texture pixel, so a label keeps its scale. */
+export const WALL_LABEL_WORLD_PER_PIXEL = 0.38 / WALL_LABEL_HEIGHT;
+
 export type WallLabelContent = {
   artist?: string;
+  caption?: string;
   number: number;
   title?: string;
   year?: number;
 };
+
+/** Returns the texture height a label needs, which grows only when a caption is present. */
+export function wallLabelHeight(caption?: string): number {
+  return caption?.trim() ? WALL_LABEL_CAPTION_HEIGHT : WALL_LABEL_HEIGHT;
+}
 
 export function generateLabelTexture(content: WallLabelContent): Texture {
   const labelText = [
@@ -23,6 +35,7 @@ export function generateLabelTexture(content: WallLabelContent): Texture {
   ]
     .filter((value) => value !== undefined && value !== '')
     .join(' · ');
+  const caption = content.caption?.trim();
   if (typeof document === 'undefined') {
     const texture = new DataTexture(
       new Uint8Array([255, 255, 255, 255]),
@@ -34,12 +47,13 @@ export function generateLabelTexture(content: WallLabelContent): Texture {
     texture.magFilter = LinearFilter;
     texture.minFilter = LinearFilter;
     texture.userData.labelText = labelText;
+    texture.userData.caption = caption;
     return texture;
   }
 
   const canvas = document.createElement('canvas');
-  canvas.width = 512;
-  canvas.height = 128;
+  canvas.width = WALL_LABEL_WIDTH;
+  canvas.height = wallLabelHeight(caption);
   const context = canvas.getContext('2d');
   if (!context) throw new Error('Canvas 2D is unavailable for wall-label generation.');
 
@@ -55,13 +69,60 @@ export function generateLabelTexture(content: WallLabelContent): Texture {
   context.font = '17px Arial, sans-serif';
   context.fillText(content.year === undefined ? '' : String(content.year), 6, 111);
 
+  if (caption) {
+    context.fillStyle = '#5a4636';
+    context.font = 'italic 16px Georgia, serif';
+    const lines = wrapCaption(context, caption, 500, 2);
+    lines.forEach((line, index) => {
+      context.fillText(line, 6, 134 + index * 20);
+    });
+  }
+
   const texture = new CanvasTexture(canvas);
   texture.colorSpace = SRGBColorSpace;
   texture.magFilter = LinearFilter;
   texture.minFilter = LinearFilter;
   texture.generateMipmaps = false;
   texture.userData.labelText = labelText;
+  texture.userData.caption = caption;
   return texture;
+}
+
+/** Wraps a caption into at most `maxLines` lines, marking any cut-off text with an ellipsis. */
+function wrapCaption(
+  context: CanvasRenderingContext2D,
+  text: string,
+  maxWidth: number,
+  maxLines: number,
+): string[] {
+  const words = text.split(/\s+/).filter(Boolean);
+  const lines: string[] = [];
+  let current = '';
+
+  for (const word of words) {
+    const candidate = current ? `${current} ${word}` : word;
+    if (context.measureText(candidate).width <= maxWidth) {
+      current = candidate;
+      continue;
+    }
+    lines.push(current);
+    current = word;
+    if (lines.length === maxLines) break;
+  }
+  if (current && lines.length < maxLines) lines.push(current);
+
+  if (lines.length === maxLines) {
+    const used = lines.join(' ').split(/\s+/).filter(Boolean).length;
+    if (used < words.length) {
+      let last = lines[maxLines - 1]!;
+      while (last.length > 1 && context.measureText(`${last}…`).width > maxWidth) {
+        last = last.slice(0, -1);
+      }
+      lines[maxLines - 1] = `${last}…`;
+    }
+  }
+
+  return lines;
 }
 
 export type GallerySignStyle = 'neon-title' | 'instructions';

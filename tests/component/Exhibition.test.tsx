@@ -146,25 +146,33 @@ describe('Exhibition', () => {
     const memoryEstimate = () =>
       renderer.scene.findByProps({ name: 'texture-memory-plaque' }).instance.userData
         .estimatedBytes;
+    const expectedBytes = (count: number) => {
+      const captionedLabels = config.stations
+        .slice(0, count)
+        .filter((station) => Boolean(station.caption?.trim())).length;
+      return (
+        ((count * 3 + 1) * 512 ** 2 +
+          count * (512 * 128) +
+          captionedLabels * (512 * 48) +
+          512 * 80 +
+          1024 * 160 +
+          1024 * 96) *
+        4
+      );
+    };
 
     expect(numbers()).toEqual([1, 2, 3]);
-    expect(memoryEstimate()).toBe(
-      ((3 * 3 + 1) * 512 ** 2 + 3 * (512 * 128) + 512 * 80 + 1024 * 160 + 1024 * 96) * 4,
-    );
+    expect(memoryEstimate()).toBe(expectedBytes(3));
     await renderer.update(
       <Exhibition config={{ ...config, count: 5 }} onSelect={() => undefined} />,
     );
     expect(numbers()).toEqual([1, 2, 3, 4, 5]);
-    expect(memoryEstimate()).toBe(
-      ((5 * 3 + 1) * 512 ** 2 + 5 * (512 * 128) + 512 * 80 + 1024 * 160 + 1024 * 96) * 4,
-    );
+    expect(memoryEstimate()).toBe(expectedBytes(5));
     await renderer.update(
       <Exhibition config={{ ...config, count: 2 }} onSelect={() => undefined} />,
     );
     expect(numbers()).toEqual([1, 2]);
-    expect(memoryEstimate()).toBe(
-      ((2 * 3 + 1) * 512 ** 2 + 2 * (512 * 128) + 512 * 80 + 1024 * 160 + 1024 * 96) * 4,
-    );
+    expect(memoryEstimate()).toBe(expectedBytes(2));
   });
 
   it('derives even horizontal positions from configured spacing', async () => {

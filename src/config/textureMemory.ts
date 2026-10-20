@@ -1,6 +1,7 @@
 type TextureBudget = {
   count: number;
   surfaceResolution: number;
+  stations?: readonly { caption?: string }[];
 };
 
 const BYTES_PER_RGBA_PIXEL = 4;
@@ -8,6 +9,8 @@ const BYTES_PER_RGBA_PIXEL = 4;
 const TEXTURE_SLOTS_PER_STATION = 3;
 const GALLERY_BACKDROP_TEXTURES = 1;
 const WALL_LABEL_PIXELS = 512 * 128;
+// A captioned label grows taller to fit its extra lines.
+const WALL_LABEL_CAPTION_EXTRA_PIXELS = 512 * (176 - 128);
 const MEMORY_PLAQUE_PIXELS = 512 * 80;
 const GALLERY_SIGN_PIXELS = 1024 * 160 + 1024 * 96;
 
@@ -15,11 +18,16 @@ const GALLERY_SIGN_PIXELS = 1024 * 160 + 1024 * 96;
 export function estimateTextureMemoryBytes({
   count,
   surfaceResolution,
+  stations = [],
 }: TextureBudget): number {
+  const captionedLabels = stations
+    .slice(0, count)
+    .filter((station) => Boolean(station.caption?.trim())).length;
   return (
     ((count * TEXTURE_SLOTS_PER_STATION + GALLERY_BACKDROP_TEXTURES) *
       surfaceResolution ** 2 +
       count * WALL_LABEL_PIXELS +
+      captionedLabels * WALL_LABEL_CAPTION_EXTRA_PIXELS +
       MEMORY_PLAQUE_PIXELS +
       GALLERY_SIGN_PIXELS) *
     BYTES_PER_RGBA_PIXEL
