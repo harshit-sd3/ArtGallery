@@ -89,6 +89,11 @@ starterStations[8]!.imageAspectRatio = 1744 / 2848;
 starterStations[8]!.artist = 'The Psychic Research Co.';
 starterStations[8]!.year = 1901;
 
+// Frame 6 shows a scanned illustration from Nos Invisibles (1907).
+starterStations[5]!.imageSrc = '/artworks/nos-invisibles-hands-1907.jpg';
+starterStations[5]!.imageAspectRatio = 4267 / 6248;
+starterStations[5]!.artist = 'Raffaele Mainella';
+
 // Frame 8 is a midnight blue wall scattered with stars.
 starterStations[7]!.wall.imageSrc = '/artworks/midnight-stars.svg';
 starterStations[7]!.wall.imageAspectRatio = 2.55 / 4.9;
