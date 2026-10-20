@@ -43,6 +43,13 @@ describe('exhibition configuration', () => {
     expect(walls[2]!.wall.color.toLowerCase()).toBe('#1e3a8a');
   });
 
+  it('titles frame 1 after the celestial sun broadsheet', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[0]!.title).toBe('The Sun in Judgement');
+    expect(walls[0]!.imageSrc).toBe('/artworks/nuremberg-celestial-1556.jpg');
+  });
+
   it('titles frame 9 after the Personal Magnetism cover', () => {
     const walls = starterExhibition.stations.slice(0, starterExhibition.count);
 
