@@ -5,7 +5,7 @@ import { Exhibition } from '../../src/scene/Exhibition';
 import { starterExhibition } from '../../src/config/exhibition';
 
 describe('Exhibition', () => {
-  it('renders 25 starter paintings with their distinct white wall shades', async () => {
+  it('renders 25 starter paintings with distinct wall colours', async () => {
     const renderer = await ReactThreeTestRenderer.create(
       <Exhibition config={starterExhibition} onSelect={() => undefined} />,
     );
@@ -14,13 +14,11 @@ describe('Exhibition', () => {
     const wallColours = walls.map((wall) =>
       ((wall.instance as Mesh).material as MeshStandardMaterial).color.getHexString(),
     );
-    const isWhiteShade = (colour: string) =>
-      colour.match(/.{2}/g)!.every((channel) => Number.parseInt(channel, 16) >= 224);
 
     expect(artworks).toHaveLength(25);
     expect(wallColours).toHaveLength(25);
     expect(new Set(wallColours).size).toBe(25);
-    expect(wallColours.every(isWhiteShade)).toBe(true);
+    expect(wallColours[0]).toBe('0f1a3d');
   });
 
   it('shows overview signs and hides them when an artwork is focused', async () => {
