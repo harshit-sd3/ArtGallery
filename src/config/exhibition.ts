@@ -47,7 +47,7 @@ const starterStations: StationConfig[] = [
   ['Near the Water', 'Nadia Okafor', 2021, '#698a9d', '#edece6'],
   ['Quiet Assembly', 'Elias Chen', 2022, '#bd785f', '#f9f7f1'],
   ['The Last Apricot', 'Mara Velez', 2024, '#d29a60', '#f1eee7'],
-  ['Outside, Slowly', 'Jonas Reed', 2020, '#758c81', '#e8e9e3'],
+  ['Outside, Slowly', 'Jonas Reed', 2020, '#758c81', '#c8d8c5'],
   ['Noon Study', 'Nadia Okafor', 2018, '#c28169', '#f4f5f0'],
   ['Soft Landing', 'Elias Chen', 2023, '#8194aa', '#ecebe4'],
   ['A Small Distance', 'Mara Velez', 2019, '#c3a46b', '#fffaf2'],
