@@ -71,6 +71,7 @@ export function Artwork({
           }
         />
         <meshStandardMaterial
+          key={image?.uuid ?? 'placeholder'}
           color={image ? '#ffffff' : color}
           map={image}
           roughness={0.84}
