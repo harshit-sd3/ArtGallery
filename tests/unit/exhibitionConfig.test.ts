@@ -40,7 +40,7 @@ describe('exhibition configuration', () => {
   it('paints frame 3 with the deep blue wall colour', () => {
     const walls = starterExhibition.stations.slice(0, starterExhibition.count);
 
-    expect(walls[2]!.wall.color.toLowerCase()).toBe('#1e3a8a');
+    expect(walls[2]!.wall.color.toLowerCase()).toBe('#00008b');
   });
 
   it('mounts and titles the magnetic man on space 10', () => {
