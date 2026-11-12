@@ -113,8 +113,9 @@ starterStations[7]!.wall.imageSrc = '/artworks/midnight-stars.svg';
 starterStations[7]!.wall.imageAspectRatio = 2.55 / 4.9;
 
 // Each station owns its wall settings and painting fields in this sole authoring surface.
-starterStations[1]!.imageSrc = '/artworks/harold-taylor.jpg';
-starterStations[1]!.imageAspectRatio = 21 / 17;
+// Space 2 mounts the selected Harold Taylor flowers image.
+starterStations[1]!.imageSrc = '/artworks/cacdoha-000291-harold-taylor.jpg';
+starterStations[1]!.imageAspectRatio = 6300 / 5100;
 starterStations[1]!.artist = 'Harold A. Taylor';
 starterStations[1]!.caption =
   'Autochrome. Orange flowers in a circle of light, colour laid on in grains of dyed potato starch.';
