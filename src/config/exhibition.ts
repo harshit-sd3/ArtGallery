@@ -76,9 +76,9 @@ starterStations[1]!.imageAspectRatio = 2 / 3;
 starterStations[4]!.imageSrc = '/artworks/bear-woman-vessel.jpg';
 starterStations[4]!.imageAspectRatio = 607 / 799;
 
-starterStations[6]!.imageSrc = '/artworks/rocchetta-mattei.jpg';
-starterStations[6]!.artist = 'Pietro Poppi';
-starterStations[6]!.imageAspectRatio = 1.223624887285843;
+starterStations[6]!.imageSrc = '/artworks/mutus-liber-altus2.jpeg';
+starterStations[6]!.artist = 'Altus';
+starterStations[6]!.imageAspectRatio = 0.720366538575229;
 
 // Frame 3 hangs an anonymous 1830 engraving of Robert Knox.
 starterStations[2]!.imageSrc = '/artworks/robert-knox-engraving.jpg';
