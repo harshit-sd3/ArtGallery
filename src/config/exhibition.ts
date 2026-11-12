@@ -31,11 +31,11 @@ const starterStations: StationConfig[] = [
   ['The Sun in Judgement', 'Anonymous', 2021, '#6e9ea5', '#0f1a3d'],
   ['A Circle of Orange', 'Jonas Reed', 2019, '#bf8063', '#0b2545'],
   // Space 3: deep blue wall.
-  ['Golden Ratio', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
+  ['Golden Ratio', 'Arthur', 2024, '#d4b46e', '#00008B'],
   ['A Single Bloom', 'Elias Chen', 2020, '#758d77', '#ece4f6'],
   // Space 5: title given in Round 3.
   ['yellow rose', 'Unattributed', 2022, '#bf00ff', '#efeee8'],
-  ['Chicken Jockey', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
+  ['Chicken Jockey', 'Jonas Reed', 2018, '#8796ad', '#1F4E79'],
   ['Premium Toast', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
   ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#191970'],
   ['Personal Magnetism', 'Mara Velez', 2020, '#b77565', '#e7e1f0'],
@@ -76,6 +76,10 @@ starterStations[1]!.imageAspectRatio = 2 / 3;
 starterStations[4]!.imageSrc = '/artworks/bear-woman-vessel.jpg';
 starterStations[4]!.imageAspectRatio = 607 / 799;
 
+starterStations[6]!.imageSrc = '/artworks/mutus-liber-altus2.jpeg';
+starterStations[6]!.artist = 'Altus';
+starterStations[6]!.imageAspectRatio = 0.720366538575229;
+
 // Frame 3 hangs an anonymous 1830 engraving of Robert Knox.
 starterStations[2]!.imageSrc = '/artworks/robert-knox-engraving.jpg';
 starterStations[2]!.imageAspectRatio = 1024 / 1307;
@@ -109,8 +113,9 @@ starterStations[7]!.wall.imageSrc = '/artworks/midnight-stars.svg';
 starterStations[7]!.wall.imageAspectRatio = 2.55 / 4.9;
 
 // Each station owns its wall settings and painting fields in this sole authoring surface.
-starterStations[1]!.imageSrc = '/artworks/harold-taylor.jpg';
-starterStations[1]!.imageAspectRatio = 21 / 17;
+// Space 2 mounts the selected Harold Taylor flowers image.
+starterStations[1]!.imageSrc = '/artworks/cacdoha-000291-harold-taylor.jpg';
+starterStations[1]!.imageAspectRatio = 6300 / 5100;
 starterStations[1]!.artist = 'Harold A. Taylor';
 starterStations[1]!.caption =
   'Autochrome. Orange flowers in a circle of light, colour laid on in grains of dyed potato starch.';
