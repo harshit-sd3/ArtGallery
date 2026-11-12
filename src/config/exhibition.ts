@@ -35,7 +35,7 @@ const starterStations: StationConfig[] = [
   ['A Single Bloom', 'Elias Chen', 2020, '#758d77', '#ece4f6'],
   // Space 5: title given in Round 3.
   ['yellow rose', 'Unattributed', 2022, '#bf00ff', '#efeee8'],
-  ['Chicken Jockey', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
+  ['Chicken Jockey', 'Jonas Reed', 2018, '#8796ad', '#00008B'],
   ['Premium Toast', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
   ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#191970'],
   ['Personal Magnetism', 'Mara Velez', 2020, '#b77565', '#e7e1f0'],
@@ -75,6 +75,10 @@ starterStations[1]!.imageSrc = '/artworks/warm-current.svg';
 starterStations[1]!.imageAspectRatio = 2 / 3;
 starterStations[4]!.imageSrc = '/artworks/bear-woman-vessel.jpg';
 starterStations[4]!.imageAspectRatio = 607 / 799;
+
+starterStations[6]!.imageSrc = '/artworks/mutus-liber-altus.jpeg';
+starterStations[6]!.artist = 'Altus';
+starterStations[6]!.imageAspectRatio = 0.720366538575229;
 
 // Frame 3 hangs an anonymous 1830 engraving of Robert Knox.
 starterStations[2]!.imageSrc = '/artworks/robert-knox-engraving.jpg';
