@@ -73,6 +73,9 @@ starterStations[0]!.imageSrc = '/artworks/nuremberg-celestial-1556.jpg';
 starterStations[0]!.imageAspectRatio = 1125 / 1104;
 starterStations[1]!.imageSrc = '/artworks/warm-current.svg';
 starterStations[1]!.imageAspectRatio = 2 / 3;
+starterStations[6]!.imageSrc = '/artworks/mutus-liber-altus3.jpeg';
+starterStations[6]!.artist = 'Altus';
+starterStations[6]!.imageAspectRatio = 0.7309165929855586;
 starterStations[4]!.imageSrc = '/artworks/bear-woman-vessel.jpg';
 starterStations[4]!.imageAspectRatio = 607 / 799;
 
