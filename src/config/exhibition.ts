@@ -36,7 +36,7 @@ const starterStations: StationConfig[] = [
   // Space 5: title given in Round 3.
   ['yellow rose', 'Unattributed', 2022, '#bf00ff', '#efeee8'],
   ['Chicken Jockey', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
-  ['Premium Toast', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
+  ['premium Bread', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
   ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#191970'],
   ['Personal Magnetism', 'Mara Velez', 2020, '#b77565', '#e7e1f0'],
   ['The Magnetic Man', 'Anonymous', 1901, '#c1a872', '#f6f7f2'],
