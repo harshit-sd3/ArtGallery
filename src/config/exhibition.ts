@@ -28,18 +28,16 @@ export type ExhibitionConfig = {
 };
 
 const starterStations: StationConfig[] = [
-  ['The Sun in Judgement', 'Anonymous', 2021, '#6e9ea5', '#0f1a3d'],
-  ['A Circle of Orange', 'Jonas Reed', 2019, '#bf8063', '#0b2545'],
-  // Space 3: deep blue wall.
-  ['Golden Ratio', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
-  ['A Single Bloom', 'Elias Chen', 2020, '#758d77', '#ece4f6'],
-  // Space 5: title given in Round 3.
-  ['yellow rose', 'Unattributed', 2022, '#bf00ff', '#efeee8'],
-  ['Chicken Jockey', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
-  ['Premium Toast', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
-  ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#191970'],
-  ['Personal Magnetism', 'Mara Velez', 2020, '#b77565', '#e7e1f0'],
-  ['The Magnetic Man', 'Anonymous', 1901, '#c1a872', '#f6f7f2'],
+  ['A Room of Blue', 'Mara Velez', 2021, '#6e9ea5', '#fffdf8'],
+  ['After the Rain', 'Jonas Reed', 2019, '#bf8063', '#fbf8f1'],
+  ['Geometric Head', 'Nadia Okafor', 2024, '#d4b46e', '#f7f5ef'],
+  ['Still Morning', 'Elias Chen', 2020, '#758d77', '#f3f2ec'],
+  ['A Place to Pause', 'Mara Velez', 2022, '#c27965', '#efeee8'],
+  ['The Quiet Field', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
+  ['Summer Index', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
+  ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#f0eee7'],
+  ['The Long Window', 'Mara Velez', 2020, '#b77565', '#fcfcf8'],
+  ['Common Light', 'Jonas Reed', 2022, '#c1a872', '#f6f7f2'],
   ['Blue Orchard', 'Nadia Okafor', 2019, '#688c92', '#f4f1e8'],
   ['Held in Place', 'Elias Chen', 2024, '#b9815e', '#f2f0e9'],
   ['Halfway Home', 'Mara Velez', 2018, '#7d927e', '#eeeae2'],
