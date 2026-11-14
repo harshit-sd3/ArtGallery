@@ -31,7 +31,7 @@ export function Wall({ config, position, texture }: WallProps) {
       {image && (
         <mesh name="wall-image" position={[0, 0, 0.006]}>
           <planeGeometry args={[2.55 * fit.widthScale, 4.9 * fit.heightScale]} />
-          <meshBasicMaterial map={image} toneMapped={false} />
+          <meshBasicMaterial map={image} transparent toneMapped={false} />
         </mesh>
       )}
     </group>

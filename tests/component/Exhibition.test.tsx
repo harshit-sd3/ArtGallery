@@ -5,7 +5,7 @@ import { Exhibition } from '../../src/scene/Exhibition';
 import { starterExhibition } from '../../src/config/exhibition';
 
 describe('Exhibition', () => {
-  it('renders 25 starter paintings with their distinct white wall shades', async () => {
+  it('renders 25 starter paintings with distinct wall colours', async () => {
     const renderer = await ReactThreeTestRenderer.create(
       <Exhibition config={starterExhibition} onSelect={() => undefined} />,
     );
@@ -14,13 +14,14 @@ describe('Exhibition', () => {
     const wallColours = walls.map((wall) =>
       ((wall.instance as Mesh).material as MeshStandardMaterial).color.getHexString(),
     );
-    const isWhiteShade = (colour: string) =>
-      colour.match(/.{2}/g)!.every((channel) => Number.parseInt(channel, 16) >= 224);
 
     expect(artworks).toHaveLength(25);
     expect(wallColours).toHaveLength(25);
     expect(new Set(wallColours).size).toBe(25);
-    expect(wallColours.every(isWhiteShade)).toBe(true);
+    expect(wallColours[0]).toBe('0f1a3d');
+    expect(wallColours[2]).toBe('1e3a8a');
+    expect(wallColours[7]).toBe('191970');
+    expect(wallColours[8]).toBe('e7e1f0');
   });
 
   it('shows overview signs and hides them when an artwork is focused', async () => {
@@ -145,25 +146,33 @@ describe('Exhibition', () => {
     const memoryEstimate = () =>
       renderer.scene.findByProps({ name: 'texture-memory-plaque' }).instance.userData
         .estimatedBytes;
+    const expectedBytes = (count: number) => {
+      const captionedLabels = config.stations
+        .slice(0, count)
+        .filter((station) => Boolean(station.caption?.trim())).length;
+      return (
+        ((count * 3 + 1) * 512 ** 2 +
+          count * (512 * 128) +
+          captionedLabels * (512 * 48) +
+          512 * 80 +
+          1024 * 160 +
+          1024 * 96) *
+        4
+      );
+    };
 
     expect(numbers()).toEqual([1, 2, 3]);
-    expect(memoryEstimate()).toBe(
-      ((3 * 3 + 1) * 512 ** 2 + 3 * (512 * 128) + 512 * 80 + 1024 * 160 + 1024 * 96) * 4,
-    );
+    expect(memoryEstimate()).toBe(expectedBytes(3));
     await renderer.update(
       <Exhibition config={{ ...config, count: 5 }} onSelect={() => undefined} />,
     );
     expect(numbers()).toEqual([1, 2, 3, 4, 5]);
-    expect(memoryEstimate()).toBe(
-      ((5 * 3 + 1) * 512 ** 2 + 5 * (512 * 128) + 512 * 80 + 1024 * 160 + 1024 * 96) * 4,
-    );
+    expect(memoryEstimate()).toBe(expectedBytes(5));
     await renderer.update(
       <Exhibition config={{ ...config, count: 2 }} onSelect={() => undefined} />,
     );
     expect(numbers()).toEqual([1, 2]);
-    expect(memoryEstimate()).toBe(
-      ((2 * 3 + 1) * 512 ** 2 + 2 * (512 * 128) + 512 * 80 + 1024 * 160 + 1024 * 96) * 4,
-    );
+    expect(memoryEstimate()).toBe(expectedBytes(2));
   });
 
   it('derives even horizontal positions from configured spacing', async () => {
