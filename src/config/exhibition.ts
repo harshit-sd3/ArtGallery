@@ -10,6 +10,7 @@ export type WallConfig = {
 
 export type StationConfig = {
   artist?: string;
+  caption?: string;
   color: string;
   imageSrc?: string;
   imageAspectRatio?: number;
@@ -65,15 +66,56 @@ const starterStations: StationConfig[] = [
   },
 }));
 
-starterStations[0]!.imageSrc = '/artworks/quiet-orbit.svg';
-starterStations[0]!.imageAspectRatio = 4 / 3;
+// Space 1 hangs a sixteenth-century broadsheet of a celestial phenomenon over Nuremberg.
+starterStations[0]!.imageSrc = '/artworks/nuremberg-celestial-1556.jpg';
+starterStations[0]!.imageAspectRatio = 1125 / 1104;
 starterStations[1]!.imageSrc = '/artworks/warm-current.svg';
 starterStations[1]!.imageAspectRatio = 2 / 3;
+starterStations[4]!.imageSrc = '/artworks/bear-woman-vessel.jpg';
+starterStations[4]!.imageAspectRatio = 607 / 799;
+
+// Frame 3 hangs an anonymous 1830 engraving of Robert Knox.
+starterStations[2]!.imageSrc = '/artworks/robert-knox-engraving.jpg';
+starterStations[2]!.imageAspectRatio = 1024 / 1307;
+
+// Frame 4 hangs an early 20th century autochrome of a rose by Harold A. Taylor.
+starterStations[3]!.imageSrc = '/artworks/harold-taylor-autochrome.jpg';
+starterStations[3]!.imageAspectRatio = 1198 / 970;
+starterStations[3]!.artist = 'Harold A. Taylor';
+starterStations[3]!.caption =
+  'Autochrome. A single pale bloom held against deep shadow, colour carried in the fragile grain of the process.';
+
+// Space 10 hangs the magnetic man drawing from the 1901 photo essay.
+starterStations[9]!.imageSrc = '/artworks/magnetic-man.jpg';
+starterStations[9]!.imageAspectRatio = 1756 / 2256;
+starterStations[9]!.artist = 'Anonymous';
+starterStations[9]!.year = 1901;
+
+// Frame 9 hangs the green "Personal Magnetism" cover from the 1901 photo essay.
+starterStations[8]!.imageSrc = '/artworks/personal-magnetism-cover.jpg';
+starterStations[8]!.imageAspectRatio = 1744 / 2848;
+starterStations[8]!.artist = 'The Psychic Research Co.';
+starterStations[8]!.year = 1901;
+
+// Frame 6 shows a scanned illustration from Nos Invisibles (1907).
+starterStations[5]!.imageSrc = '/artworks/nos-invisibles-hands-1907.jpg';
+starterStations[5]!.imageAspectRatio = 4267 / 6248;
+starterStations[5]!.artist = 'Raffaele Mainella';
+
+// Frame 8 is a midnight blue wall scattered with stars.
+starterStations[7]!.wall.imageSrc = '/artworks/midnight-stars.svg';
+starterStations[7]!.wall.imageAspectRatio = 2.55 / 4.9;
 
 starterStations[2]!.imageSrc = '/artworks/picasso-head-woman.jpg';
 starterStations[2]!.imageAspectRatio = 603 / 511;
 
 // Each station owns its wall settings and painting fields in this sole authoring surface.
+starterStations[1]!.imageSrc = '/artworks/harold-taylor.jpg';
+starterStations[1]!.imageAspectRatio = 21 / 17;
+starterStations[1]!.artist = 'Harold A. Taylor';
+starterStations[1]!.caption =
+  'Autochrome. Orange flowers in a circle of light, colour laid on in grains of dyed potato starch.';
+
 export const starterExhibition: ExhibitionConfig = {
   count: 25,
   spacing: 2.55,

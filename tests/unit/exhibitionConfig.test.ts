@@ -11,7 +11,7 @@ describe('exhibition configuration', () => {
     expect(starterExhibition.stations).toHaveLength(25);
   });
 
-  it('uses a different white shade for each starter wall', () => {
+  it('gives every wall a distinct colour', () => {
     const colours = starterExhibition.stations
       .slice(0, starterExhibition.count)
       .map((station) => station.wall.color.toLowerCase());
@@ -23,9 +23,63 @@ describe('exhibition configuration', () => {
     );
 
     expect(new Set(colours).size).toBe(25);
-    expect(channels.every((rgb) => rgb.length === 3 && Math.min(...rgb) >= 224)).toBe(
-      true,
-    );
+    expect(
+      channels.every(
+        (rgb) =>
+          rgb.length === 3 && rgb.every((channel) => channel >= 0 && channel <= 255),
+      ),
+    ).toBe(true);
+  });
+
+  it('paints frame 1 with the deep blue wall colour', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[0]!.wall.color.toLowerCase()).toBe('#0f1a3d');
+  });
+
+  it('paints frame 3 with the deep blue wall colour', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[2]!.wall.color.toLowerCase()).toBe('#1e3a8a');
+  });
+
+  it('mounts and titles the magnetic man on space 10', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[9]!.title).toBe('The Magnetic Man');
+    expect(walls[9]!.artist).toBe('Anonymous');
+    expect(walls[9]!.year).toBe(1901);
+    expect(walls[9]!.imageSrc).toBe('/artworks/magnetic-man.jpg');
+    expect(walls[9]!.imageAspectRatio).toBeCloseTo(1756 / 2256);
+  });
+
+  it('titles frame 1 after the celestial sun broadsheet', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[0]!.title).toBe('The Sun in Judgement');
+    expect(walls[0]!.imageSrc).toBe('/artworks/nuremberg-celestial-1556.jpg');
+  });
+
+  it('titles frame 9 after the Personal Magnetism cover', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[8]!.title).toBe('Personal Magnetism');
+    expect(walls[8]!.artist).toBe('The Psychic Research Co.');
+    expect(walls[8]!.imageSrc).toBe('/artworks/personal-magnetism-cover.jpg');
+  });
+
+  it('paints frame 8 with the midnight blue wall colour and stars', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[7]!.wall.color.toLowerCase()).toBe('#191970');
+    expect(walls[7]!.wall.imageSrc).toBe('/artworks/midnight-stars.svg');
+    expect(walls[7]!.wall.imageAspectRatio).toBeCloseTo(2.55 / 4.9);
+  });
+
+  it('paints frame 9 with the soft lilac wall colour', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[8]!.wall.color.toLowerCase()).toBe('#e7e1f0');
   });
 
   it('accepts the starter exhibition', () => {
@@ -51,7 +105,9 @@ describe('exhibition configuration', () => {
     const config: ExhibitionConfig = structuredClone(starterExhibition);
     config.stations[1]!.wall.color = config.stations[0]!.wall.color;
 
-    expect(() => validateExhibition(config)).toThrow(/duplicate wall colour .+ shared by frames 1 and 2/i);
+    expect(() => validateExhibition(config)).toThrow(
+      /duplicate wall colour .+ shared by frames 1 and 2/i,
+    );
   });
 
   it('rejects a non-positive painting count with a clear error', () => {
