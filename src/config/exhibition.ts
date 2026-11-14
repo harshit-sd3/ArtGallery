@@ -29,7 +29,7 @@ export type ExhibitionConfig = {
 const starterStations: StationConfig[] = [
   ['A Room of Blue', 'Mara Velez', 2021, '#6e9ea5', '#fffdf8'],
   ['After the Rain', 'Jonas Reed', 2019, '#bf8063', '#fbf8f1'],
-  ['Soft Geometry', 'Nadia Okafor', 2024, '#d4b46e', 'limewash'],
+  ['Soft Geometry', 'Nadia Okafor', 2024, '#d4b46e', '#f7f5ef'],
   ['Still Morning', 'Elias Chen', 2020, '#758d77', '#f3f2ec'],
   ['A Place to Pause', 'Mara Velez', 2022, '#c27965', '#efeee8'],
   ['The Quiet Field', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
@@ -69,6 +69,9 @@ starterStations[0]!.imageSrc = '/artworks/quiet-orbit.svg';
 starterStations[0]!.imageAspectRatio = 4 / 3;
 starterStations[1]!.imageSrc = '/artworks/warm-current.svg';
 starterStations[1]!.imageAspectRatio = 2 / 3;
+
+starterStations[2]!.imageSrc = '/artworks/picasso-head-woman.jpg';
+starterStations[2]!.imageAspectRatio = 603 / 511;
 
 // Each station owns its wall settings and painting fields in this sole authoring surface.
 export const starterExhibition: ExhibitionConfig = {
