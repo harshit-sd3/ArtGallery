@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 980" role="img" aria-label="Scattered stars on a transparent midnight blue wall">
+  <g fill="#ffffff">
+    <circle cx="62" cy="118" r="4.5" opacity="0.95"/>
+    <circle cx="148" cy="86" r="3.2" opacity="0.8"/>
+    <circle cx="233" cy="164" r="5.5" opacity="1"/>
+    <circle cx="331" cy="102" r="3.8" opacity="0.85"/>
+    <circle cx="421" cy="190" r="4.8" opacity="0.9"/>
+    <circle cx="95" cy="252" r="3.4" opacity="0.75"/>
+    <circle cx="196" cy="318" r="4.2" opacity="0.9"/>
+    <circle cx="289" cy="264" r="3.1" opacity="0.7"/>
+    <circle cx="392" cy="352" r="5.1" opacity="0.95"/>
+    <circle cx="52" cy="404" r="3.6" opacity="0.8"/>
+    <circle cx="166" cy="455" r="4.9" opacity="0.9"/>
+    <circle cx="263" cy="412" r="3.3" opacity="0.75"/>
+    <circle cx="355" cy="498" r="4.1" opacity="0.85"/>
+    <circle cx="437" cy="570" r="3.7" opacity="0.7"/>
+    <circle cx="78" cy="610" r="5.2" opacity="0.95"/>
+    <circle cx="180" cy="682" r="3.5" opacity="0.8"/>
+    <circle cx="276" cy="632" r="4.6" opacity="0.9"/>
+    <circle cx="368" cy="716" r="3.2" opacity="0.7"/>
+    <circle cx="108" cy="790" r="4.3" opacity="0.85"/>
+    <circle cx="240" cy="838" r="5.4" opacity="1"/>
+    <circle cx="342" cy="782" r="3.9" opacity="0.8"/>
+    <circle cx="446" cy="868" r="4.7" opacity="0.9"/>
+    <circle cx="44" cy="900" r="3.4" opacity="0.7"/>
+    <circle cx="150" cy="930" r="4.4" opacity="0.85"/>
+  </g>
+  <g fill="#ffe9a8">
+    <circle cx="112" cy="178" r="2.6" opacity="0.9"/>
+    <circle cx="268" cy="96" r="3.1" opacity="0.8"/>
+    <circle cx="376" cy="142" r="2.4" opacity="0.75"/>
+    <circle cx="30" cy="322" r="2.8" opacity="0.85"/>
+    <circle cx="218" cy="242" r="3.4" opacity="0.95"/>
+    <circle cx="312" cy="342" r="2.2" opacity="0.7"/>
+    <circle cx="462" cy="276" r="3" opacity="0.8"/>
+    <circle cx="72" cy="520" r="2.5" opacity="0.75"/>
+    <circle cx="202" cy="560" r="3.2" opacity="0.9"/>
+    <circle cx="300" cy="510" r="2.3" opacity="0.7"/>
+    <circle cx="404" cy="640" r="2.9" opacity="0.85"/>
+    <circle cx="140" cy="742" r="2.7" opacity="0.8"/>
+    <circle cx="296" cy="724" r="3.3" opacity="0.9"/>
+    <circle cx="406" cy="806" r="2.6" opacity="0.7"/>
+    <circle cx="56" cy="846" r="2.4" opacity="0.75"/>
+    <circle cx="198" cy="880" r="2.8" opacity="0.85"/>
+    <circle cx="388" cy="918" r="3" opacity="0.8"/>
+  </g>
+  <g fill="#cfe4ff">
+    <circle cx="88" cy="62" r="2.4" opacity="0.85"/>
+    <circle cx="258" cy="196" r="2.8" opacity="0.8"/>
+    <circle cx="458" cy="108" r="2.2" opacity="0.7"/>
+    <circle cx="22" cy="462" r="2.6" opacity="0.8"/>
+    <circle cx="232" cy="386" r="2.1" opacity="0.7"/>
+    <circle cx="330" cy="470" r="2.9" opacity="0.85"/>
+    <circle cx="470" cy="700" r="2.3" opacity="0.7"/>
+    <circle cx="96" cy="690" r="2.7" opacity="0.8"/>
+    <circle cx="252" cy="548" r="2.2" opacity="0.7"/>
+    <circle cx="414" cy="242" r="2.5" opacity="0.8"/>
+    <circle cx="160" cy="478" r="2" opacity="0.65"/>
+  </g>
+  <g fill="#fffbe8">
+    <path d="M185 129 L188 139 L198 142 L188 145 L185 155 L182 145 L172 142 L182 139 Z" opacity="0.95"/>
+    <path d="M395 258 L397 265 L404 268 L397 271 L395 278 L393 271 L386 268 L393 265 Z" opacity="0.9"/>
+    <path d="M120 359 L122 366 L129 368 L122 370 L120 377 L118 370 L111 368 L118 366 Z" opacity="0.85"/>
+    <path d="M300 692 L303 700 L311 704 L303 708 L300 716 L297 708 L289 704 L297 700 Z" opacity="0.95"/>
+    <path d="M215 797 L217 803 L223 805 L217 807 L215 813 L213 807 L207 805 L213 803 Z" opacity="0.9"/>
+  </g>
+</svg>

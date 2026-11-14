@@ -121,6 +121,7 @@ export function Exhibition({
             />
             <WallLabel
               artist={station.artist}
+              caption={station.caption}
               number={index + 1}
               position={[x, 1.45, 0.32]}
               title={station.title}
