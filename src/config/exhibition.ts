@@ -41,7 +41,7 @@ const starterStations: StationConfig[] = [
   ['Personal Magnetism', 'Mara Velez', 2020, '#b77565', '#e7e1f0'],
   ['The Magnetic Man', 'Anonymous', 1901, '#c1a872', '#f6f7f2'],
   ['Blue Orchard', 'Nadia Okafor', 2019, '#688c92', '#f4f1e8'],
-  ['Held in Place', 'Elias Chen', 2024, '#b9815e', '#f2f0e9'],
+  ['Held in Place', 'Elias Chen', 2024, '#b9815e', '#7851A9'],
   ['Halfway Home', 'Mara Velez', 2018, '#7d927e', '#eeeae2'],
   ['A Familiar Shape', 'Jonas Reed', 2023, '#c59c72', '#f8f3ea'],
   ['Near the Water', 'Nadia Okafor', 2021, '#698a9d', '#edece6'],
