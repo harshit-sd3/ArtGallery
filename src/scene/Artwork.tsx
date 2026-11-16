@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { ThreeEvent } from '@react-three/fiber';
-import { TextureLoader, type Texture } from 'three';
+import { SRGBColorSpace, TextureLoader, type Texture } from 'three';
 import { fitAspectRatio } from '../surfaces/fitAspectRatio';
 import { hasOverviewPanStarted } from '../navigation/overviewPan';
 
@@ -70,11 +70,11 @@ export function Artwork({
               : [1.25, 1.8]
           }
         />
-        <meshStandardMaterial
-          color={image ? '#ffffff' : color}
-          map={image}
-          roughness={0.84}
-        />
+        {image ? (
+          <meshBasicMaterial map={image} toneMapped={false} />
+        ) : (
+          <meshStandardMaterial color={color} roughness={0.84} />
+        )}
       </mesh>
     </group>
   );
@@ -93,6 +93,7 @@ function useArtworkImage(imageSrc?: string) {
     new TextureLoader().load(
       imageSrc,
       (loaded) => {
+        loaded.colorSpace = SRGBColorSpace;
         if (active) setTexture(loaded);
       },
       undefined,
