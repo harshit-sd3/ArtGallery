@@ -41,7 +41,7 @@ const starterStations: StationConfig[] = [
   ['Personal Magnetism', 'Mara Velez', 2020, '#b77565', '#e7e1f0'],
   ['The Magnetic Man', 'Anonymous', 1901, '#c1a872', '#f6f7f2'],
   ['Blue Orchard', 'Nadia Okafor', 2019, '#688c92', '#f4f1e8'],
-  ['Held in Place', 'Christopher Switzer', 2024, '#b9815e', '#7851A9'],
+  ['Garden of Eden', 'Christopher Switzer', 2024, '#b9815e', '#7851A9'],
   ['Halfway Home', 'Mara Velez', 2018, '#7d927e', '#eeeae2'],
   ['A Familiar Shape', 'Jonas Reed', 2023, '#c59c72', '#f8f3ea'],
   ['Near the Water', 'Nadia Okafor', 2021, '#698a9d', '#edece6'],
@@ -118,6 +118,8 @@ starterStations[7]!.wall.imageAspectRatio = 2.55 / 4.9;
 // Space 12 hangs the 1629 frontispiece depicting the Garden of Eden.
 starterStations[11]!.imageSrc = '/artworks/frontispiece-garden-of-eden-1629.jpg';
 starterStations[11]!.imageAspectRatio = 2695 / 4307;
+starterStations[11]!.caption =
+  'A 1629 frontispiece envisioning Eden as a lush, emblematic garden of origins and wonder.';
 
 // Each station owns its wall settings and painting fields in this sole authoring surface.
 // Space 2 mounts the selected Harold Taylor flowers image.
