@@ -1,7 +1,7 @@
 import type { Texture } from 'three';
 import type { WallConfig } from '../config/exhibition';
 import { useEffect, useState } from 'react';
-import { TextureLoader, type Texture as ThreeTexture } from 'three';
+import { SRGBColorSpace, TextureLoader, type Texture as ThreeTexture } from 'three';
 import { fitAspectRatio } from '../surfaces/fitAspectRatio';
 
 type WallProps = {
@@ -50,6 +50,7 @@ function useWallImage(imageSrc?: string) {
     new TextureLoader().load(
       imageSrc,
       (loaded) => {
+        loaded.colorSpace = SRGBColorSpace;
         if (active) setImage(loaded);
       },
       undefined,
