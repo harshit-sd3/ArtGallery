@@ -53,6 +53,27 @@ describe('exhibition configuration', () => {
     expect(walls[9]!.imageAspectRatio).toBeCloseTo(1756 / 2256);
   });
 
+  it('mounts the Bertuch vegetable lamb plate on space 13', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[12]!.imageSrc).toBe('/artworks/bertuch-vegetable-lamb-1801.jpg');
+    expect(walls[12]!.imageAspectRatio).toBeCloseTo(2196 / 1764);
+  });
+
+  it('titles space 14 and gives it a curatorial caption', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[13]!.title).toBe('Mohaid Ahmed Art Work');
+    expect(walls[13]!.caption?.trim()).toBeTruthy();
+  });
+
+  it('mounts the Histoires prodigieuses miniature on space 14', () => {
+    const walls = starterExhibition.stations.slice(0, starterExhibition.count);
+
+    expect(walls[13]!.imageSrc).toBe('/artworks/histoires-prodigieuses-00002.jpg');
+    expect(walls[13]!.imageAspectRatio).toBeCloseTo(2634 / 2938);
+  });
+
   it('titles frame 1 after the celestial sun broadsheet', () => {
     const walls = starterExhibition.stations.slice(0, starterExhibition.count);
 
