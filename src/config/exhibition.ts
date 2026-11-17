@@ -108,6 +108,11 @@ starterStations[5]!.artist = 'Raffaele Mainella';
 starterStations[7]!.wall.imageSrc = '/artworks/midnight-stars.svg';
 starterStations[7]!.wall.imageAspectRatio = 2.55 / 4.9;
 
+// Space 21 hangs an 1857 ukiyo-e woodblock print by Utagawa Hiroshige.
+starterStations[20]!.imageSrc = '/artworks/hiroshige-fox-fires-oji-1857.jpg';
+starterStations[20]!.imageAspectRatio = 600 / 894;
+starterStations[20]!.artist = 'Utagawa Hiroshige';
+
 // Each station owns its wall settings and painting fields in this sole authoring surface.
 starterStations[1]!.imageSrc = '/artworks/harold-taylor.jpg';
 starterStations[1]!.imageAspectRatio = 21 / 17;
