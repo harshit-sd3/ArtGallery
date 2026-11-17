@@ -29,14 +29,14 @@ export type ExhibitionConfig = {
 
 const starterStations: StationConfig[] = [
   ['The Sun in Judgement', 'Anonymous', 2021, '#6e9ea5', '#0f1a3d'],
-  ['A Circle of Orange', 'Jonas Reed', 2019, '#bf8063', '#0b2545'],
+  ['A Circle of Orange', 'Jonas Reed', 2019, '#bf8063', '#2e8b57'],
   // Space 3: deep blue wall.
   ['Golden Ratio', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
   ['A Single Bloom', 'Elias Chen', 2020, '#758d77', '#ece4f6'],
   // Space 5: title given in Round 3.
   ['yellow rose', 'Unattributed', 2022, '#bf00ff', '#efeee8'],
   ['Chicken Jockey', 'Jonas Reed', 2018, '#8796ad', '#faf5eb'],
-  ['Premium Toast', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
+  ['the quiet garden', 'Nadia Okafor', 2023, '#d59b58', '#f5f0e6'],
   ['Small Weather', 'Elias Chen', 2021, '#6f8d83', '#191970'],
   ['Personal Magnetism', 'Mara Velez', 2020, '#b77565', '#e7e1f0'],
   ['The Magnetic Man', 'Anonymous', 1901, '#c1a872', '#f6f7f2'],
@@ -114,9 +114,9 @@ starterStations[20]!.imageAspectRatio = 600 / 894;
 starterStations[20]!.artist = 'Utagawa Hiroshige';
 
 // Each station owns its wall settings and painting fields in this sole authoring surface.
-starterStations[1]!.imageSrc = '/artworks/harold-taylor.jpg';
-starterStations[1]!.imageAspectRatio = 21 / 17;
-starterStations[1]!.artist = 'Harold A. Taylor';
+starterStations[1]!.imageSrc = '/artworks/french-postcard-late-19th-century.jpg';
+starterStations[1]!.imageAspectRatio = 550 / 850;
+starterStations[1]!.artist = 'Anonymous';
 starterStations[1]!.caption =
   'Autochrome. Orange flowers in a circle of light, colour laid on in grains of dyed potato starch.';
 
