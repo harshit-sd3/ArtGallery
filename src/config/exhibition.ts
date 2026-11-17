@@ -43,7 +43,8 @@ const starterStations: StationConfig[] = [
   ['Blue Orchard', 'Nadia Okafor', 2019, '#688c92', '#f4f1e8'],
   ['Garden of Eden', 'Christopher Switzer', 2024, '#b9815e', '#7851A9'],
   ['Halfway Home', 'Mara Velez', 2018, '#7d927e', '#eeeae2'],
-  ['A Familiar Shape', 'Jonas Reed', 2023, '#c59c72', '#f8f3ea'],
+  // Space 14: retitled, with a curatorial caption below.
+  ['Mohaid Ahmed Art Work', 'Jonas Reed', 2023, '#c59c72', '#f8f3ea'],
   ['Near the Water', 'Nadia Okafor', 2021, '#698a9d', '#edece6'],
   ['Quiet Assembly', 'Elias Chen', 2022, '#bd785f', '#f9f7f1'],
   ['The Last Apricot', 'Mara Velez', 2024, '#d29a60', '#f1eee7'],
@@ -120,6 +121,16 @@ starterStations[11]!.imageSrc = '/artworks/frontispiece-garden-of-eden-1629.jpg'
 starterStations[11]!.imageAspectRatio = 2695 / 4307;
 starterStations[11]!.caption =
   'A 1629 frontispiece envisioning Eden as a lush, emblematic garden of origins and wonder.';
+
+// Space 13 hangs Bertuch's 1801 plate of the vegetable lamb.
+starterStations[12]!.imageSrc = '/artworks/bertuch-vegetable-lamb-1801.jpg';
+starterStations[12]!.imageAspectRatio = 2196 / 1764;
+
+// Space 14 hangs a miniature from Histoires prodigieuses, with a curatorial caption beneath its title.
+starterStations[13]!.imageSrc = '/artworks/histoires-prodigieuses-00002.jpg';
+starterStations[13]!.imageAspectRatio = 2634 / 2938;
+starterStations[13]!.caption =
+  'Hand-painted miniature. A blazing star falls on a burning city while a barefoot figure points to the omen.';
 
 // Each station owns its wall settings and painting fields in this sole authoring surface.
 // Space 2 mounts the selected Harold Taylor flowers image.
