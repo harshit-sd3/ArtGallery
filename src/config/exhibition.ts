@@ -133,10 +133,10 @@ starterStations[13]!.caption =
   'Hand-painted miniature. A blazing star falls on a burning city while a barefoot figure points to the omen.';
 
 // Each station owns its wall settings and painting fields in this sole authoring surface.
-// Space 2 mounts the selected Harold Taylor flowers image.
-starterStations[1]!.imageSrc = '/artworks/cacdoha-000291-harold-taylor.jpg';
-starterStations[1]!.imageAspectRatio = 6300 / 5100;
-starterStations[1]!.artist = 'Harold A. Taylor';
+// Space 2 mounts a 19th-century French postcard from the Public Domain Image Archive.
+starterStations[1]!.imageSrc = '/artworks/french-postcard-late-19th-century.jpg';
+starterStations[1]!.imageAspectRatio = 550 / 850;
+starterStations[1]!.artist = 'Anonymous';
 starterStations[1]!.caption =
   'Autochrome. Orange flowers in a circle of light, colour laid on in grains of dyed potato starch.';
 
