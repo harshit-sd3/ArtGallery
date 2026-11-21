@@ -28,7 +28,7 @@ export type ExhibitionConfig = {
 };
 
 const starterStations: StationConfig[] = [
-  ['The Sun in Judgement', 'Anonymous', 2021, '#6e9ea5', '#0f1a3d'],
+  ['The Sun in Judgement', 'Anonymous', 2021, '#6e9ea5', '#000080'],
   ['A Circle of Orange', 'Jonas Reed', 2019, '#bf8063', '#2e8b57'],
   // Space 3: deep blue wall.
   ['Golden Ratio', 'Arthur', 2024, '#d4b46e', '#1e3a8a'],
