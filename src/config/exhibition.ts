@@ -133,12 +133,10 @@ starterStations[13]!.caption =
   'Hand-painted miniature. A blazing star falls on a burning city while a barefoot figure points to the omen.';
 
 // Each station owns its wall settings and painting fields in this sole authoring surface.
-// Space 2 mounts a 19th-century French postcard from the Public Domain Image Archive.
-starterStations[1]!.imageSrc = '/artworks/french-postcard-late-19th-century.jpg';
-starterStations[1]!.imageAspectRatio = 550 / 850;
-starterStations[1]!.artist = 'Anonymous';
-starterStations[1]!.caption =
-  'Autochrome. Orange flowers in a circle of light, colour laid on in grains of dyed potato starch.';
+// Space 2 mounts a folio from John of Arderne's Sweden Scroll (ca. 1425–35).
+starterStations[1]!.imageSrc = '/artworks/arderne-scroll-00044.jpeg';
+starterStations[1]!.imageAspectRatio = 1071 / 1455;
+starterStations[1]!.artist = 'John of Arderne';
 
 export const starterExhibition: ExhibitionConfig = {
   count: 25,
