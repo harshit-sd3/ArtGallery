@@ -138,6 +138,11 @@ starterStations[1]!.imageSrc = '/artworks/arderne-scroll-00044.jpeg';
 starterStations[1]!.imageAspectRatio = 1071 / 1455;
 starterStations[1]!.artist = 'John of Arderne';
 
+// Frame 11 hangs a folio from John of Arderne's Sweden Scroll.
+starterStations[10]!.imageSrc = '/artworks/arderne-scroll-00024.jpeg';
+starterStations[10]!.imageAspectRatio = 1269 / 1624;
+starterStations[10]!.artist = 'John of Arderne';
+
 export const starterExhibition: ExhibitionConfig = {
   count: 25,
   spacing: 2.55,
